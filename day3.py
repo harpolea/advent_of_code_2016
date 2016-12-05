@@ -37,13 +37,11 @@ def find_triangles_part_2(in_file):
 
     lines = np.array(lines)
     rot_lines = np.zeros_like(lines)
-    print(np.shape(rot_lines))
     # now rotate
     for i in range(int(len(lines) / 3)):
         rot_lines[i*3,:] = sorted(lines[i*3:(i+1)*3,0])
         rot_lines[i*3+1,:] = sorted(lines[i*3:(i+1)*3,1])
         rot_lines[i*3+2,:] = sorted(lines[i*3:(i+1)*3,2])
-    print(rot_lines)
 
     possible_total = 0 # total number of possible triangles
 
