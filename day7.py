@@ -65,7 +65,6 @@ def find_ips_part_2(in_file):
         hypernet = False
         valid = False
 
-        abas = []
         babs = []
         hypernet_str =  ''
 
