@@ -3,7 +3,7 @@ import re
 
 def pixels(in_file):
     screen = np.zeros((6, 50), dtype=bool)
-
+    
     def rect(a,b):
         screen[:b,:a] = True
 
