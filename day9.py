@@ -2,10 +2,8 @@ import numpy as np
 import re
 
 def decompressed_len(t):
-    print(t)
     m = re.search('\((\d+)x(\d+)\)', t)
     if m is None:
-        print(t, len(t))
         return len(t)
     else:
         i = int(m.group(1))
