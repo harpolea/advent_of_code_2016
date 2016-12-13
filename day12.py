@@ -26,13 +26,11 @@ def execute(in_file, c_init=0):
             registers[l[-1]] -= 1
             line_counter += 1
         else:
-            #print(l)
             m = re.search('jnz (\S+) (\d+)', l)
             if m is None:
                 m = re.search('jnz (\S+) (-\d+)', l)
             r = m.group(1)
             if (r in 'abcd' and not(registers[r] == 0)):
-                #print(m.group(2))
                 line_counter += int(m.group(2))
             elif r.isnumeric() and not(int(r) == 0):
                 line_counter += int(m.group(2))
