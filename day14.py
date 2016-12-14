@@ -1,4 +1,4 @@
-import hashlib, re, collections
+import hashlib, re
 
 def find_index(salt, part_2=False):
     potential_keys = {}
@@ -7,7 +7,7 @@ def find_index(salt, part_2=False):
     while len(keys) < 64:
         h = str(hashlib.md5(str.encode(salt + str(i))).hexdigest())
         if part_2:
-            for i in range(2016):
+            for j in range(2016):
                 h = hashlib.md5(str.encode(h)).hexdigest()
         # test potential_keys to see if found multiple of five
         to_remove = set()
