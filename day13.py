@@ -59,8 +59,7 @@ def a_star(start=(1,1), goal=(31,39)):
 
         # if current is None, choose something in openSet
         current = next(iter(openSet))
-        #current = next (iter (fScore.values()))
-        #print(current)
+
         if current == goal:
             return reconstruct_path(cameFrom, current)
 
@@ -69,7 +68,7 @@ def a_star(start=(1,1), goal=(31,39)):
 
         # make neighbours
         ns = neighbours(current)
-        #print(ns)
+
         for n in ns:
             if n in closedSet:
                 continue
@@ -91,7 +90,7 @@ if __name__ == "__main__":
     n_locs = 0
 
     # Find number of locations can reach in < 50 steps
-    # need to check all locations in 35 x 35 square
+    # need to check all locations in 35 x 35 square as 50 ~= sqrt(2)*35
     for x in range(35):
         for y in range(35):
             path, steps = a_star((1,1), (x,y))
