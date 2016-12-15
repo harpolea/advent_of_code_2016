@@ -28,7 +28,7 @@ def find_index(salt, part_2=False):
             potential_keys[i] = m.group()[0]
         i+= 1
 
-    print(sorted(keys))
+    #print(sorted(keys))
     print("Index of 64th key is: {}".format(sorted(keys)[63]))
 
 if __name__ == "__main__":
