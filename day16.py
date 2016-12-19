@@ -1,6 +1,3 @@
-import re, copy
-import numpy as np
-
 def dragon(in_str, target_length):
 
     def make_data(a):
@@ -26,7 +23,6 @@ def dragon(in_str, target_length):
         checksum = make_checksum(checksum)
 
     print('Checksum is {}.'.format(checksum))
-
 
 if __name__ == "__main__":
     in_str = "00101000101111010"
